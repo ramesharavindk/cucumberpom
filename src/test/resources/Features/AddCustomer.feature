@@ -1,12 +1,12 @@
-#Author: Greens
+#Author: Ramesh
+
 @addcust
 Feature: To test add customer
+    
 
-  Background: 
-    Given The user is in add customer page
-
-  @us12 @us21 @us22
+  @FunctionalTesting
   Scenario: Title of your scenario 1
+    Given The user is in add customer page
     When The user fill in the customer details
       | fname   | lname    | email           | adress  | phnum       |
       | myfname | mylname  | test@gmail.com  | chennai |   723462348 |

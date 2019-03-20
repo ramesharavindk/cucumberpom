@@ -1,8 +1,9 @@
-#Author: your.email@your.domain.com
-@regression @sprint1 @addtarif
+#Author: Ramesh
+
+@addtariff
 Feature: To test add tariff plan
 
-  @us1234
+  @FunctionalTesting
   Scenario Outline: To verify success message upo adding multiple plans
     Given The user is in add tariff plan page
     When The user fill in the tariff plan details "<MonthRent>" , "<freeLoc>","<freeInt>","<freeSMS>","<localCharge>","<intCharge>","<smsCharge>"
