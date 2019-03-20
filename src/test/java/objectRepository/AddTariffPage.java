@@ -1,41 +1,65 @@
-package cucumber;
+package objectRepository;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import cucumber.BaseClass;
+
 public class AddTariffPage {
-	
+
 	public AddTariffPage() {
-		PageFactory.initElements(BaseClass.driver, this);		
+		PageFactory.initElements(BaseClass.driver, this);
 	}
-	
-	@FindBy(id="rental1")
+
+	@FindBy(id = "rental1")
 	private WebElement monthlyRental;
-	
-	@FindBy(id="local_minutes")
+
+	@FindBy(id = "local_minutes")
 	private WebElement freeLocalMins;
-	
-	@FindBy(id="inter_minutes")
+
+	@FindBy(id = "inter_minutes")
 	private WebElement freeIntMins;
-	
-	@FindBy(id="sms_pack")
+
+	@FindBy(id = "sms_pack")
 	private WebElement freeSMSpack;
-	
-	@FindBy(id="minutes_charges")
+
+	@FindBy(id = "minutes_charges")
 	private WebElement localperminchar;
-	
-	@FindBy(id="inter_charges")
+
+	@FindBy(id = "inter_charges")
 	private WebElement interpermincharges;
-	
-	@FindBy(id="sms_charges")
+
+	@FindBy(id = "sms_charges")
 	private WebElement smsPercharge;
-	
-	@FindBy(name="submit")
+
+	@FindBy(name = "submit")
 	private WebElement btnsubmit;
-	
-	@FindBy(xpath="//input[@type='reset']")
+
+	@FindBy(xpath = "//input[@type='reset']")
 	private WebElement butreset;
+
+	@FindBy(xpath = "//h2[contains(text(),'Congratulation you add Tariff Plan')]")
+	private WebElement successmessage;
+
+	@FindBy(xpath = "//ul[@class='actions']//a[contains(text(),'Home']")
+	private WebElement hometext;
+
+	public WebElement getSuccessmessage() {
+		return successmessage;
+	}
+
+	public void setSuccessmessage(WebElement successmessage) {
+		this.successmessage = successmessage;
+	}
+
+	public WebElement getHometext() {
+		return hometext;
+	}
+
+	public void setHometext(WebElement hometext) {
+		this.hometext = hometext;
+	}
 
 	public WebElement getMonthlyRental() {
 		return monthlyRental;

@@ -1,13 +1,14 @@
 package cucumber;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseClass {
-	
-	static WebDriver driver;
-	
-	public void openBrowser() {
+
+	public static WebDriver driver;
+
+	public static void openBrowser() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Ramesh Aravind\\eclipse-TestNG\\CucumberRamesh\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -15,12 +16,12 @@ public class BaseClass {
 	}
 
 	// Closing Browser
-	public void quitBrowser() {
+	public static void quitBrowser() {
 		driver.quit();
 	}
 
 	// Close Window
-	public void closeWindow() {
+	public static void closeWindow() {
 		driver.close();
 	}
 
@@ -41,5 +42,11 @@ public class BaseClass {
 		return url;
 	}
 
+	public void setValue(WebElement ele, String value) {
+		ele.sendKeys(value);
+	}
 
+	public void click(WebElement ele) {
+		ele.click();
+	}
 }
